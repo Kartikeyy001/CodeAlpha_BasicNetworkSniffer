@@ -10,6 +10,7 @@ The sniffer processes packets in real time using a callback-based analysis funct
 🛠️ Technologies & Libraries
 
 Python 3
+
 Scapy – packet sniffing, protocol parsing, and payload extraction
 
 ⚙️ Core Functional Capabilities
