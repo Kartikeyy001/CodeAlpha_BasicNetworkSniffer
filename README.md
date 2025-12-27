@@ -2,6 +2,7 @@
 🖥️ Basic Network Sniffer Using Python & Scapy
 
 📄 Technical Project Overview
+
 This project implements a low-level network packet sniffer using Python and the Scapy library to capture and analyze live network traffic in real time. The application operates by interfacing directly with the network interface to intercept packets and performs Layer 3 (Network Layer) and Layer 4 (Transport Layer) inspection in accordance with the TCP/IP networking model.
 
 Each captured packet is examined to verify the presence of an IP header, from which the source and destination IP addresses are extracted. The sniffer then identifies the encapsulated transport-layer protocol by analyzing packet layers, supporting TCP, UDP, and ICMP protocol detection. For TCP traffic, the program further inspects the packet payload and outputs raw payload bytes when present, enabling visibility into transmitted data segments.
