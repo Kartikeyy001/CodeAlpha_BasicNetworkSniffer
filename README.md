@@ -20,11 +20,17 @@ Scapy – packet capture, protocol dissection, and field extraction
 Real-time interception of network traffic
 
 Layer 3 IP packet inspection and validation
+
 Extraction of source and destination IP addresses
+
 Analysis of the IP protocol field for traffic classification
+
 Layer 4 transport protocol identification (TCP / UDP)
+
 Extraction of TCP and UDP source and destination port numbers
+
 Controlled packet capture using a defined packet count limit
+
 Event-driven packet analysis via callback functions
 
 ▶️ Execution Instructions
