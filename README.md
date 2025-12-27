@@ -1,5 +1,6 @@
 # CodeAlpha_BasicNetworkSniffer
 🖥️ Basic Network Sniffer Using Python & Scapy
+
 📄 Technical Project Overview
 This project implements a low-level network packet sniffer using Python and the Scapy library to capture and analyze live network traffic in real time. The application operates by interfacing directly with the network interface to intercept packets and performs Layer 3 (Network Layer) and Layer 4 (Transport Layer) inspection in accordance with the TCP/IP networking model.
 
