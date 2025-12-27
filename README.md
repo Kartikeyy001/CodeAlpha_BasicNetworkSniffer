@@ -1,47 +1,58 @@
 # CodeAlpha_BasicNetworkSniffer
-🖥️ Basic Network Sniffer Using Python & Scapy
+🖥️ Network Packet Sniffer Using Python & Scapy
+📄 Technical Overview
 
-📄 Technical Project Overview
+This project implements a packet-level network traffic analysis tool using Python and the Scapy library to capture and inspect live network packets in real time. The sniffer operates by interfacing directly with the system’s network interface and performs inspection at the Network Layer (Layer 3) and Transport Layer (Layer 4) of the TCP/IP protocol stack.
 
-This project implements a low-level network packet sniffer using Python and the Scapy library to capture and analyze live network traffic in real time. The application operates by interfacing directly with the network interface to intercept packets and performs Layer 3 (Network Layer) and Layer 4 (Transport Layer) inspection in accordance with the TCP/IP networking model.
+Each captured packet is validated for the presence of an IP header, from which the tool extracts the source and destination IP addresses along with the IP protocol field, providing visibility into the underlying protocol used for communication. The application further analyzes transport-layer encapsulation by identifying TCP and UDP packets and extracting their respective source and destination port numbers, enabling service-level traffic analysis.
 
-Each captured packet is examined to verify the presence of an IP header, from which the source and destination IP addresses are extracted. The sniffer then identifies the encapsulated transport-layer protocol by analyzing packet layers, supporting TCP, UDP, and ICMP protocol detection. For TCP traffic, the program further inspects the packet payload and outputs raw payload bytes when present, enabling visibility into transmitted data segments.
-
-The sniffer processes packets in real time using a callback-based analysis function and avoids packet persistence to optimize memory usage. This project provides foundational exposure to packet structure, protocol encapsulation, network traffic behavior, and traffic analysis techniques commonly used in cybersecurity monitoring and intrusion detection systems.
+The packet processing is implemented using an event-driven callback function, allowing packets to be analyzed immediately upon capture. To maintain controlled execution and resource efficiency, the sniffer limits packet capture to a predefined number of packets. This project demonstrates core techniques used in network monitoring, traffic inspection, and cybersecurity analysis, forming a foundation for intrusion detection and network defense systems.
 
 🛠️ Technologies & Libraries
 
 Python 3
 
-Scapy – packet sniffing, protocol parsing, and payload extraction
+Scapy – packet capture, protocol dissection, and field extraction
 
 ⚙️ Core Functional Capabilities
 
-Real-time network traffic interception
-Layer 3 IP packet validation and analysis
-Transport-layer protocol classification TCP / UDP / ICMP)
-Extraction and display of source and destination IP addresses
-TCP payload inspection and raw data output
-Event-driven packet processing using callback functions
-Memory-efficient sniffing using non-persistent packet storage
+Real-time interception of network traffic
+
+Layer 3 IP packet inspection and validation
+
+Extraction of source and destination IP addresses
+
+Analysis of the IP protocol field for traffic classification
+
+Layer 4 transport protocol identification (TCP / UDP)
+
+Extraction of TCP and UDP source and destination port numbers
+
+Controlled packet capture using a defined packet count limit
+
+Event-driven packet analysis via callback functions
 
 ▶️ Execution Instructions
 
-Due to the requirement for raw socket access, the program must be executed with administrator/root privileges:
+Due to raw socket access requirements, the program must be executed with administrator/root privileges:
+
 sudo python sniffer.py
 
-🎯 Learning Outcomes & Skills Developed
+🎯 Learning Outcomes & Technical Skills Developed
 
-Practical understanding of TCP/IP protocol stack
-Packet-level network traffic analysis
-Identification of transport-layer protocols
-Interpretation of packet payload data
-Familiarity with network monitoring and sniffing tools
-Foundation for building intrusion detection and traffic analysis systems
+Practical understanding of the TCP/IP networking model
+
+Interpretation of IP and transport-layer protocol fields
+
+Analysis of service-level communication through port numbers
+
+Hands-on experience with packet sniffing and inspection tools
+
+Foundational knowledge applicable to intrusion detection systems (IDS) and network traffic monitoring
 
 ⚠️ Ethical & Legal Considerations
 
-This tool is intended strictly for educational purposes and must only be used on networks where explicit permission has been granted. Unauthorized packet sniffing may violate privacy laws and organizational security policies.
+This tool is intended solely for educational and authorized testing purposes. Packet sniffing on networks without explicit permission may violate privacy regulations and organizational security policies.
 
 🚀 Internship Context
 
