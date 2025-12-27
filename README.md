@@ -12,6 +12,7 @@ The packet processing is implemented using an event-driven callback function, al
 🛠️ Technologies & Libraries
 
 Python 3
+
 Scapy – packet capture, protocol dissection, and field extraction
 
 ⚙️ Core Functional Capabilities
