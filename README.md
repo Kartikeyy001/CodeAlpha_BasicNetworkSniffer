@@ -1,52 +1,46 @@
 # CodeAlpha_BasicNetworkSniffer
-📌 Basic Network Sniffer
-📖 Technical Description
+🖥️ Basic Network Sniffer Using Python & Scapy
+📄 Technical Project Overview
+This project implements a low-level network packet sniffer using Python and the Scapy library to capture and analyze live network traffic in real time. The application operates by interfacing directly with the network interface to intercept packets and performs Layer 3 (Network Layer) and Layer 4 (Transport Layer) inspection in accordance with the TCP/IP networking model.
 
-This project implements a packet-level network sniffer using Python and the Scapy framework to capture and analyze live network traffic. The application operates at the network and transport layers of the TCP/IP model, inspecting packets in real time to extract critical metadata and payload information.
+Each captured packet is examined to verify the presence of an IP header, from which the source and destination IP addresses are extracted. The sniffer then identifies the encapsulated transport-layer protocol by analyzing packet layers, supporting TCP, UDP, and ICMP protocol detection. For TCP traffic, the program further inspects the packet payload and outputs raw payload bytes when present, enabling visibility into transmitted data segments.
 
-Each captured packet is analyzed to identify the IP layer, determine the transport-layer protocol (TCP, UDP, or ICMP), and extract source and destination IP addresses. For TCP packets, the program additionally inspects and displays the payload data, enabling low-level visibility into transmitted information.
+The sniffer processes packets in real time using a callback-based analysis function and avoids packet persistence to optimize memory usage. This project provides foundational exposure to packet structure, protocol encapsulation, network traffic behavior, and traffic analysis techniques commonly used in cybersecurity monitoring and intrusion detection systems.
 
-This sniffer provides hands-on exposure to packet structure, protocol headers, and network communication behavior, which are foundational concepts in network security monitoring and traffic analysis.
-
-🛠 Technologies Used
+🛠️ Technologies & Libraries
 
 Python 3
+Scapy – packet sniffing, protocol parsing, and payload extraction
 
-Scapy (packet manipulation and sniffing library)
+⚙️ Core Functional Capabilities
 
-⚙️ Core Functionality
-
-Real-time packet capture from network interfaces
-
-Layer-3 (IP) packet inspection
-
-Layer-4 protocol identification (TCP / UDP / ICMP)
-
-Extraction of source and destination IP addresses
-
-Payload inspection for TCP traffic
-
+Real-time network traffic interception
+Layer 3 IP packet validation and analysis
+Transport-layer protocol classification TCP / UDP / ICMP)
+Extraction and display of source and destination IP addresses
+TCP payload inspection and raw data output
+Event-driven packet processing using callback functions
 Memory-efficient sniffing using non-persistent packet storage
 
 ▶️ Execution Instructions
 
-The program must be executed with elevated privileges to access raw network traffic:
-
+Due to the requirement for raw socket access, the program must be executed with administrator/root privileges:
 sudo python sniffer.py
 
-🎯 Learning Outcomes
+🎯 Learning Outcomes & Skills Developed
 
-Understanding of TCP/IP packet architecture
+Practical understanding of TCP/IP protocol stack
+Packet-level network traffic analysis
+Identification of transport-layer protocols
+Interpretation of packet payload data
+Familiarity with network monitoring and sniffing tools
+Foundation for building intrusion detection and traffic analysis systems
 
-Practical experience with network traffic analysis
+⚠️ Ethical & Legal Considerations
 
-Familiarity with transport-layer protocols
+This tool is intended strictly for educational purposes and must only be used on networks where explicit permission has been granted. Unauthorized packet sniffing may violate privacy laws and organizational security policies.
 
-Insight into payload data inspection and limitations
-
-Foundation for intrusion detection and network monitoring systems
-
-🚀 Internship Task
+🚀 Internship Context
 
 Cyber Security Internship — CodeAlpha
 Task 1: Basic Network Sniffer
